@@ -47,6 +47,7 @@ RUN set -ex; \
 COPY assets/ /
 
 VOLUME [ "/var/lib/streaming" ]
+RUN chmod -R 655 /var/lib/streaming
 EXPOSE 1935 8080 8443
 CMD [ "nginx", "-g", "daemon off;" ]
 
